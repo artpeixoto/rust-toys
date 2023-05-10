@@ -4,7 +4,7 @@ use web_server::tools::{basic_types::cached::Thunk, extensions::*};
 
 pub struct Contentor<'a>(pub(in super) HashMap<String, Thunk<'a, String>>);
 // ele gosta
-
+// ratinho-o-o-o
 impl<'a> Contentor<'a> {
 	pub(in super) fn get_contentor_for_path(path: &PathBuf) -> Contentor<'a>{
         println!("Looking for content in {}", path.as_os_str().to_str().unwrap());
