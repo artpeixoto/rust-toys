@@ -1,8 +1,3 @@
-use std::fmt::format;
-
-use crate::internals::extensions::usado_em::UsadoEm;
-
-
 pub struct Address{
     pub ip:     (u8, u8, u8, u8),
     pub port:   u16

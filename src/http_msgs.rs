@@ -1,19 +1,15 @@
 
 use std::
 	{ fmt::
-		{ Debug, Display, Write
+		{ Debug, Display
 		}
 	, collections::{
-		HashMap,
-		hash_map::{
-			Entry
-			}
-		}
-	, str::{FromStr, Lines}, error::Error, char::TryFromCharError, vec, slice::Iter, ops::Add
+		HashMap
+		}, error::Error
 	, result::Result::*
 };
 
-use super::extensions::{*, usado_em::UsadoEm};
+use crate::tools::extensions::*;
 
 type HeaderValContentType = String;
 
@@ -40,6 +36,24 @@ impl From<Option<HeaderValContentType>> for HeaderVal{
 		}
     }
 }
+fn test(){
+	let mut a = ((String::new(), String::new()),String::new());
+	let ra = &mut a;
+	{
+		let a0 = &mut ra.0.0;
+		
+		fn test_ra0(fuck: &mut String){
+			fuck.push_str( "asdf");
+		}
+		fn test_a0(mut fuck: String){
+			fuck.push_str("rarara");
+		}
+		test_ra0(a0);
+	};
+
+	print!("{}", a.0.0);
+}
+
 
 impl Into<Option<HeaderValContentType>> for HeaderVal{
     fn into(self) -> Option<HeaderValContentType> {
