@@ -3,7 +3,7 @@ use std::{path::{PathBuf, Iter}, collections::HashMap, fs::{ReadDir, self}, defa
 use web_server::tools::{basic_types::cached::Thunk, extensions::*};
 
 pub struct Contentor<'a>(pub(in super) HashMap<String, Thunk<'a, String>>);
-
+// ele gosta
 
 impl<'a> Contentor<'a> {
 	pub(in super) fn get_contentor_for_path(path: &PathBuf) -> Contentor<'a>{
