@@ -1,9 +1,12 @@
-[package]
-name = "web-server"
-version = "0.1.0"
-edition = "2021"
-
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
-regex = "1.7.3"
+[workspace] 
+members = [
+	"fun_tools",
+	"executable_fun/cli_fun",
+	"executable_fun/queens",
+	"executable_fun/simple_http_server",
+	"executable_fun/matrix_fun",
+	"executable_fun/macros_fun"
+]
+
